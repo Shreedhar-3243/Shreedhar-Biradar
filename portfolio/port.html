@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="port.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul>
+                <li><a href="port.html">Home</a></li>
+                <li><a href="about.html">About </a></li>  
+                <li><a href="services.html">Services</a></li>                   
+                <li><a href="skills.html">Skills</a></li>
+
+            </ul>
+           <a href="contact.html"><button class="ctn-btn">Contact Me</button></a>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Hello, my Self</h2>
+            <h1>Shreedhar Biradar</h1>
+            <p>I'am a Web Developer.</p>
+            <form>
+                <input type="email" placeholder="Enter Your Email">
+                <button class="start-btn">Let's Start</button>
+            </form>
+            <div class="profile-image">
+            </div>
+        </section>
+    </main>
+    <div class="about-container">
+        <h1>About Me</h1>
+        <div class="about-content">           
+            <div class="about-image"></div>
+            <div class="about-text">
+                <p>Hi, I'm Shreedhar Biradar, a Web Developer based in India. I love building responsive and user-friendly websites.</p>
+                <p>With experience in HTML, CSS, JavaScript, and more, I'm passionate about creating digital experiences that make an impact.</p>
+            </div>
+        </div>
+    </div>
+    <div class="services-container">
+        <h1>My Services</h1>
+        <div class="services-content">
+            <div class="service-box">
+                <h2>Web Development</h2>
+                <p>Building responsive and dynamic websites using modern technologies.</p>
+            </div>
+            <div class="service-box">
+                <h2>UI/UX Design</h2>
+                <p>Creating user-friendly interfaces and enhancing user experience.</p>
+            </div>
+            <div class="service-box">
+                <h2>SEO Optimization</h2>
+                <p>Improving website visibility and search engine rankings.</p>
+            </div>
+        </div>
+    </div>
+        <div class="skills-container">
+        <h1>My Skills</h1>
+        <div class="skills-content">
+            <div class="skill-box" data-skill="HTML">
+                <h2>HTML</h2>
+                <div class="skill-bar"><div class="skill-level" style="width: 98%"></div></div>
+                <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-box" data-skill="CSS">
+                <h2>CSS</h2>
+                <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
+                <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-box" data-skill="JavaScript">
+                <h2>JavaScript</h2>
+                <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-box" data-skill="UI/UX">
+                <h2>UI/UX Design</h2>
+                <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+                <span class="skill-percent">75%</span>
+            </div>
+        </div>
+    </div>  
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+         <input type="hidden" name="access_key" value="4c56c006-6197-4200-9626-d643a8ac42ab">
+        <div class="form-group"> 
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="last-name" placeholder="Last Name">
+            <input type="tel" name="phone" placeholder="Phone number">
+            <input type="text" name="address" placeholder="Address">
+            <textarea name="message" placeholder="Send message"></textarea>
+        <button type="submit">Submit</button>
+          </div>
+    </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Shreedhar Biradar. All rights reserved.</p>
+        
+    </footer>
+    <script src="port.js"></script>
+</body>
+</html>

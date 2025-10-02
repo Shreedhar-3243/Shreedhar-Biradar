@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a7a2a2;
+    color: #fff;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #585454;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.ctn-btn {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.contact-container {
+    max-width: 1200px;
+    margin: 48px auto;
+    padding: 32px 24px;
+    background: #585454;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.contact-container h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #2d2d2d;
+    margin-bottom: 24px;
+    letter-spacing: 1.5px;
+}
+
+#contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 30%;
+    max-width: 420px;
+    padding: 8px 10px;
+    border: 2px solid #787a7a;
+    border-radius: 25px;
+    font-size: 1.25rem;
+    background: #d6d5d5;
+    resize: none;
+    transition: border 0.2s;
+    margin-bottom: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border: 2px solid #141414;
+    outline: none;
+}
+
+#contact-form button[type="submit"] {
+   background-color: #d6d5d5;
+    border: 2px solid #141414;
+    border-radius: 10px;
+    padding: 8px 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 15%;
+    margin-bottom: 15px;
+    transition: background 0.2s, transform 0.2s;
+    display: block;
+}
+#contact-form button[type="submit"]:hover {
+    background: #ff4500;
+    color: #fff;
+    transform: translateY(-2px);
+}
+@media (max-width: 700px) {
+    .contact-container {
+        padding: 18px 4px;
+    }
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 1.05rem;
+        max-width: 98%;
+    }
+    #contact-form button[type="submit"] {
+        font-size: 1.1rem;
+        width: 90%;
+    }
+}
+
+</style>
+<body>
+    <body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul>
+                <li><a href="port.html">Home</a></li>
+                <li><a href="about.html">About </a></li>  
+                <li><a href="services.html">Services</a></li>                   
+                <li><a href="skills.html">Skills</a></li>
+
+            </ul>
+           <a href="contact.html"><button class="ctn-btn">Contact Me</button></a>
+        </nav>
+    </header>
+    
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+         <input type="hidden" name="access_key" value="4c56c006-6197-4200-9626-d643a8ac42ab">
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="last-name" placeholder="Last Name">
+            <input type="tel" name="phone" placeholder="Phone number">
+            <input type="text" name="address" placeholder="Address">
+            <textarea name="message" placeholder="Send message"></textarea>
+        <button type="submit">Submit</button>
+          </div>
+    </form>
+    </div>
+    <script src="port.js">
+        document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var name = document.getElementById('name')?.value.trim();
+            var lastName = document.getElementById('last-name')?.value.trim();
+            var phone = document.getElementById('phone')?.value.trim();
+            var address = document.getElementById('address')?.value.trim();
+            var email = document.getElementById('email')?.value.trim();
+            var message = document.getElementById('message')?.value.trim();
+
+            if (!name || !lastName || !phone || !address || !email || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // Simulate sending (no backend)
+            alert('Thank you, ' + name + '! Your message has been sent.');
+            form.reset();
+        });
+    }
+});
+    </script>
+</body>
+</html>

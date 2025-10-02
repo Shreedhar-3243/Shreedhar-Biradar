@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a7a2a2;
+    color: #fff;
+}
+
+    header {
+    padding: 0rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #585454;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.ctn-btn {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+    .services-container {
+    max-width: 1200px;
+    height: 500px;
+    margin: 48px auto;
+    padding: 32px 24px;
+    background: #585454;
+    border-radius: 18px;
+    box-shadow: 8px 8px 8px rgba(12, 10, 10, 0.07);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+    .services-container h1 {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #faf8f8;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+}
+
+.services-content {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-box {
+    background: #585454;
+    border-radius: 14px;
+   box-shadow: 0 2px 12px rgba(255, 253, 253, 0.377);
+    padding: 28px 22px;
+    width: 270px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.service-box:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 20px rgba(201, 199, 199, 0.12);
+    
+}
+
+.service-box h2 {
+    font-size: 1.3rem;
+    color: #fd943e;
+    margin-bottom: 14px;
+}
+
+.service-box p {
+    color: #f8f7f7;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+</style>
+<body>
+<header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul>
+                <li><a href="port.html">Home</a></li>
+                <li><a href="about.html">About </a></li>  
+                <li><a href="services.html">Services</a></li>                   
+                <li><a href="skills.html">Skills</a></li>
+
+            </ul>
+           <a href="contact.html"><button class="ctn-btn">Contact Me</button></a>
+        </nav>
+    </header>
+<div class="services-container">
+        <h1>My Services</h1>
+        <div class="services-content">
+            <div class="service-box">
+                <h2>Web Development</h2>
+                <p>Building responsive and dynamic websites using modern technologies.</p>
+            </div>
+            <div class="service-box">
+                <h2>UI/UX Design</h2>
+                <p>Creating user-friendly interfaces and enhancing user experience.</p>
+            </div>
+            <div class="service-box">
+                <h2>SEO Optimization</h2>
+                <p>Improving website visibility and search engine rankings.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="port.js">
+    document.addEventListener("DOMContentLoaded", function() {
+    var serviceBoxes = document.querySelectorAll('.service-box');
+    serviceBoxes.forEach(function(box) {
+        box.addEventListener('click', function() {
+            alert('You clicked on: ' + box.querySelector('h2').textContent);
+        });
+    });
+});
+</script>
+</html>

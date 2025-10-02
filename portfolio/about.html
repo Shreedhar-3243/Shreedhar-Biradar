@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a7a2a2;
+    color: #fff;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #585454;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.ctn-btn {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+    .about-container {
+    max-width: 1200px;
+    height: 500px;
+    margin: 40px auto;
+    padding: 32px 24px;
+    background: #585454;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.about-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fdfcfc;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-image {
+    width: 180px;
+    height: 180px;
+    background: url('shree.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(255, 253, 253, 0.377);
+    flex-shrink: 0;
+}
+.about-image:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 20px rgba(201, 199, 199, 0.12);
+}
+
+.about-text {
+    flex: 1 1 300px;
+    font-size: 1.1rem;
+    color: #fcf7f7;
+    line-height: 1.7;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+}
+.services-container {
+    max-width: 1200px;
+    height: 500px;
+    margin: 48px auto;
+    padding: 32px 24px;
+    background: #585454;
+    border-radius: 18px;
+    box-shadow: 8px 8px 8px rgba(12, 10, 10, 0.07);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul>
+                <li><a href="port.html">Home</a></li>
+                <li><a href="about.html">About </a></li>  
+                <li><a href="services.html">Services</a></li>                   
+                <li><a href="skills.html">Skills</a></li>
+
+            </ul>
+           <a href="contact.html"><button class="ctn-btn">Contact Me</button></a>
+        </nav>
+    </header>
+    
+<div class="about-container">
+        <h1>About Me</h1>
+        <div class="about-content">           
+            <div class="about-image"></div>
+            <div class="about-text">
+                <p>Hi, I'm Shreedhar Biradar, a Web Developer based in India. I love building responsive and user-friendly websites.</p>
+                <p>With experience in HTML, CSS, JavaScript, and more, I'm passionate about creating digital experiences that make an impact.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="port.js">
+    document.addEventListener("DOMContentLoaded", function() {
+    var aboutContainer = document.querySelector('.about-container');
+    if (aboutContainer) {
+        aboutContainer.style.borderRadius = "18px";
+    }
+});
+</script>
+</html>
